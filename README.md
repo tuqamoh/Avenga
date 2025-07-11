@@ -4,12 +4,17 @@ This project automates the testing of a RESTful Book API using Java, REST Assure
 The project contains two main packages:
 
 src/main/java [wich includes all configurations and test implementations]
+
 configurations.java      # Loads base URL from BookData.json
+
 CRUDBooksEndpoints.java  # Book API methods (POST, GET, PUT, DELETE)
 
 src/tests/java [wich includes Test Cases for happy and unhappy paths]
+
 BooksTest.java           # Main TestNG test class
+
 BookData.json            # Test data and base URL
+
 pom.xml                  # Maven dependencies
 
 **Prerequisites**
