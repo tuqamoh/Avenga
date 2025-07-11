@@ -1,0 +1,43 @@
+{
+  "baseUrl": "https://fakerestapi.azurewebsites.net/api/v1/",
+  "scenarios": [
+    {
+     "id": 50,
+     "title": "Book 50",
+     "description": "test book description 50",
+     "pageCount": 2000, 
+     "excerpt": "test book excerpt",
+     "publishDate": "2025-07-11T12:21:26.285Z"
+    },
+    {
+     "description": "test book description 50",
+     "pageCount": 2000, 
+     "excerpt": "test book excerpt",
+     "publishDate": "2025-07-11T12:21:26.285Z"
+    },
+    {
+      "id": 50,
+      "title": "Book 50 updated version",
+      "description": "updated version",
+      "pageCount": 2001,
+      "excerpt": "test book excerpt 2",
+      "publishDate": "2025-07-11T12:21:26.285Z"
+    },
+    {
+      "id": "test",
+      "title": "Book Three",
+      "description": "Third test book",
+      "pageCount": 300,
+      "excerpt": "Excerpt 3",
+      "publishDate": "2025-07-11T12:21:26.285Z"
+    },
+    {
+      "id": "1",
+      "title": "Book Three",
+      "description": "Third test book",
+      "pageCount": 300,
+      "excerpt": "Excerpt 3",
+      "publishDate": 1
+    }
+  ]
+}
