@@ -29,5 +29,11 @@ IDE (I used Eclipse)
 3-Verify directory structure, ensure this file exists: BookData.json
 
 The project also contains TestReport.html that provides provides a clear summary of the test executions, and shows the status of each test case.
+
 Finally you'll find .yaml file inside .github\workflows folder that handles the CI/CD Configurations of the project and you will be able to see it running under Actions Tab in the GIT repo.
+
+TestNG reports will be generated during the GitHub Actions CI process and are uploaded as artifacts:
+
+willc automatically run with every push/pull request
+and will be available in `target/site/surefire-report.html`(you'll find the report in Actions > click on the latest run workflow> scroll down to Artifacts)
  
