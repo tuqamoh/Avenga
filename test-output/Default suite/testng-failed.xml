@@ -3,17 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.BooksTest">
+      <class name="tests.PUTBooksEndpointTest">
         <methods>
-          <include name="getBookById"/>
-          <include name="retrieveAllBooks"/>
-          <include name="negativeScenarios"/>
           <include name="updateBookById"/>
           <include name="init"/>
-          <include name="deleteBookById"/>
-          <include name="createNewBookTest"/>
         </methods>
-      </class> <!-- tests.BooksTest -->
+      </class> <!-- tests.PUTBooksEndpointTest -->
+      <class name="tests.POSTBooksEndpointTest">
+        <methods>
+          <include name="createNewBookTest"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- tests.POSTBooksEndpointTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
