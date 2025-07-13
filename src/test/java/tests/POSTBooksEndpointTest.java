@@ -32,24 +32,6 @@ public class POSTBooksEndpointTest extends BaseClass {
 		System.out.println("Created Book ID: " + BookId);
 
 		assertBookFieldsMatch(actualJson);
-		
-		// Test second scenario Create New book without Id or Title
-
-		setScenario(1); // second Scenario in the jsonFile (without Id and Title)
-
-		// Execute POST Books Endpoint to create a new book with json request payload
-		Response secondTestCaseResponse = Books.createNewBook(payload);
-
-		// Assert that status code is success = 200
-		Assert.assertEquals(secondTestCaseResponse.getStatusCode(), 200, "POST request failed");
-
-		// Assert that Same Id will be 0 by default if not passed
-		int actualId = secondTestCaseResponse.jsonPath().getInt("id");
-		Assert.assertEquals(actualId, 0, "Book ID does not match expected value");
-
-		// Assert that Same Title will be null
-		String actualTitle = secondTestCaseResponse.jsonPath().getString("title");
-		Assert.assertEquals(actualTitle, null);
 
 	}
 	

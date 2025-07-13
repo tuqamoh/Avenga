@@ -1,43 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-13T16:25:10 EET" name="Default suite" finished-at="2025-07-13T16:25:19 EET" duration-ms="8693">
+  <suite started-at="2025-07-13T16:58:07 EET" name="Suite" finished-at="2025-07-13T16:58:26 EET" duration-ms="18730">
     <groups>
     </groups>
-    <test started-at="2025-07-13T16:25:10 EET" name="Default test" finished-at="2025-07-13T16:25:19 EET" duration-ms="8693">
-      <class name="tests.POSTBooksEndpointTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:tests.POSTBooksEndpointTest@957e06]" started-at="2025-07-13T16:25:17 EET" name="init" finished-at="2025-07-13T16:25:17 EET" duration-ms="31" status="PASS">
+    <test started-at="2025-07-13T16:58:07 EET" name="Test" finished-at="2025-07-13T16:58:26 EET" duration-ms="18730">
+      <class name="tests.GETBooksendpointTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.GETBooksendpointTest@51e69659]" started-at="2025-07-13T16:58:16 EET" name="init" finished-at="2025-07-13T16:58:16 EET" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="createNewBookTest()[pri:1, instance:tests.POSTBooksEndpointTest@957e06]" started-at="2025-07-13T16:25:17 EET" name="createNewBookTest" description="Happy Scenario: Create a new book and validate response" finished-at="2025-07-13T16:25:18 EET" duration-ms="1103" status="PASS">
+        <test-method signature="createNewBookTest()[pri:1, instance:tests.GETBooksendpointTest@51e69659]" started-at="2025-07-13T16:58:16 EET" name="createNewBookTest" description="Happy Scenario: Create a new book and validate response" finished-at="2025-07-13T16:58:16 EET" duration-ms="933" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewBookTest -->
-        <test-method signature="createNewBookTestWithoutIdOrTitle()[pri:2, instance:tests.POSTBooksEndpointTest@957e06]" started-at="2025-07-13T16:25:18 EET" name="createNewBookTestWithoutIdOrTitle" description="Happy Scenario: Test second scenario Create New book without Id or Title" finished-at="2025-07-13T16:25:19 EET" duration-ms="413" status="PASS">
+        <test-method signature="createNewBookTestWithoutIdOrTitle()[pri:2, instance:tests.GETBooksendpointTest@51e69659]" started-at="2025-07-13T16:58:16 EET" name="createNewBookTestWithoutIdOrTitle" description="Happy Scenario: Test second scenario Create New book without Id or Title" finished-at="2025-07-13T16:58:17 EET" duration-ms="795" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewBookTestWithoutIdOrTitle -->
-      </class> <!-- tests.POSTBooksEndpointTest -->
+        <test-method signature="getBookById()[pri:3, instance:tests.GETBooksendpointTest@51e69659]" started-at="2025-07-13T16:58:17 EET" name="getBookById" description="Happy Scenario: Retrieve book by ID and validate fields" finished-at="2025-07-13T16:58:18 EET" depends-on-methods="tests.POSTBooksEndpointTest.createNewBookTest" duration-ms="546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookById -->
+        <test-method signature="retrieveAllBooks()[pri:4, instance:tests.GETBooksendpointTest@51e69659]" started-at="2025-07-13T16:58:18 EET" name="retrieveAllBooks" description="Happy Scenario: Retrieve All Books in the database including the newly posted one" finished-at="2025-07-13T16:58:19 EET" duration-ms="1657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrieveAllBooks -->
+      </class> <!-- tests.GETBooksendpointTest -->
+      <class name="tests.PUTBooksEndpointTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.PUTBooksEndpointTest@47e2e487]" started-at="2025-07-13T16:58:19 EET" name="init" finished-at="2025-07-13T16:58:19 EET" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="createNewBookTest()[pri:1, instance:tests.PUTBooksEndpointTest@47e2e487]" started-at="2025-07-13T16:58:19 EET" name="createNewBookTest" description="Happy Scenario: Create a new book and validate response" finished-at="2025-07-13T16:58:20 EET" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewBookTest -->
+        <test-method signature="createNewBookTestWithoutIdOrTitle()[pri:2, instance:tests.PUTBooksEndpointTest@47e2e487]" started-at="2025-07-13T16:58:20 EET" name="createNewBookTestWithoutIdOrTitle" description="Happy Scenario: Test second scenario Create New book without Id or Title" finished-at="2025-07-13T16:58:20 EET" duration-ms="447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewBookTestWithoutIdOrTitle -->
+        <test-method signature="updateBookById()[pri:5, instance:tests.PUTBooksEndpointTest@47e2e487]" started-at="2025-07-13T16:58:20 EET" name="updateBookById" description="Happy Scenario: Update Book by Id" finished-at="2025-07-13T16:58:21 EET" depends-on-methods="tests.POSTBooksEndpointTest.createNewBookTest" duration-ms="468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookById -->
+      </class> <!-- tests.PUTBooksEndpointTest -->
       <class name="tests.DeleteBooksEndpointTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:tests.DeleteBooksEndpointTest@4803b726]" started-at="2025-07-13T16:25:10 EET" name="init" finished-at="2025-07-13T16:25:12 EET" duration-ms="1818" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.DeleteBooksEndpointTest@201a4587]" started-at="2025-07-13T16:58:21 EET" name="init" finished-at="2025-07-13T16:58:21 EET" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="createNewBookTest()[pri:1, instance:tests.DeleteBooksEndpointTest@4803b726]" started-at="2025-07-13T16:25:12 EET" name="createNewBookTest" description="Happy Scenario: Create a new book and validate response" finished-at="2025-07-13T16:25:16 EET" duration-ms="4125" status="PASS">
+        <test-method signature="createNewBookTest()[pri:1, instance:tests.DeleteBooksEndpointTest@201a4587]" started-at="2025-07-13T16:58:21 EET" name="createNewBookTest" description="Happy Scenario: Create a new book and validate response" finished-at="2025-07-13T16:58:21 EET" duration-ms="502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewBookTest -->
-        <test-method signature="createNewBookTestWithoutIdOrTitle()[pri:2, instance:tests.DeleteBooksEndpointTest@4803b726]" started-at="2025-07-13T16:25:16 EET" name="createNewBookTestWithoutIdOrTitle" description="Happy Scenario: Test second scenario Create New book without Id or Title" finished-at="2025-07-13T16:25:17 EET" duration-ms="631" status="PASS">
+        <test-method signature="createNewBookTestWithoutIdOrTitle()[pri:2, instance:tests.DeleteBooksEndpointTest@201a4587]" started-at="2025-07-13T16:58:21 EET" name="createNewBookTestWithoutIdOrTitle" description="Happy Scenario: Test second scenario Create New book without Id or Title" finished-at="2025-07-13T16:58:22 EET" duration-ms="414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewBookTestWithoutIdOrTitle -->
-        <test-method signature="deleteBookById()[pri:6, instance:tests.DeleteBooksEndpointTest@4803b726]" started-at="2025-07-13T16:25:17 EET" name="deleteBookById" description="Happy Scenario: Delete Book by Id" finished-at="2025-07-13T16:25:17 EET" depends-on-methods="tests.POSTBooksEndpointTest.createNewBookTest" duration-ms="496" status="PASS">
+        <test-method signature="deleteBookById()[pri:6, instance:tests.DeleteBooksEndpointTest@201a4587]" started-at="2025-07-13T16:58:22 EET" name="deleteBookById" description="Happy Scenario: Delete Book by Id" finished-at="2025-07-13T16:58:22 EET" depends-on-methods="tests.POSTBooksEndpointTest.createNewBookTest" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteBookById -->
       </class> <!-- tests.DeleteBooksEndpointTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="tests.POSTBooksEndpointTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.POSTBooksEndpointTest@12aba8be]" started-at="2025-07-13T16:58:07 EET" name="init" finished-at="2025-07-13T16:58:09 EET" duration-ms="2152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="createNewBookTest()[pri:1, instance:tests.POSTBooksEndpointTest@12aba8be]" started-at="2025-07-13T16:58:09 EET" name="createNewBookTest" description="Happy Scenario: Create a new book and validate response" finished-at="2025-07-13T16:58:14 EET" duration-ms="4865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewBookTest -->
+        <test-method signature="createNewBookTestWithoutIdOrTitle()[pri:2, instance:tests.POSTBooksEndpointTest@12aba8be]" started-at="2025-07-13T16:58:14 EET" name="createNewBookTestWithoutIdOrTitle" description="Happy Scenario: Test second scenario Create New book without Id or Title" finished-at="2025-07-13T16:58:16 EET" duration-ms="1168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewBookTestWithoutIdOrTitle -->
+      </class> <!-- tests.POSTBooksEndpointTest -->
+      <class name="tests.NegativeScenariosTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.NegativeScenariosTest@7d900ecf]" started-at="2025-07-13T16:58:22 EET" name="init" finished-at="2025-07-13T16:58:22 EET" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="negativeScenarios()[pri:7, instance:tests.NegativeScenariosTest@7d900ecf]" started-at="2025-07-13T16:58:22 EET" name="negativeScenarios" description="Negative Scenarios" finished-at="2025-07-13T16:58:26 EET" duration-ms="3645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeScenarios -->
+      </class> <!-- tests.NegativeScenariosTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
