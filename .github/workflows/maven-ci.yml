@@ -31,11 +31,11 @@ jobs:
       - name: Run Maven tests
         run: mvn clean test
 
-      - name: Generate Surefire report
-        run: mvn surefire-report:report
+      - name: Generate Surefire HTML report
+        run: mvn surefire-report:report-only
 
       - name: Upload Surefire HTML report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: surefire-report
           path: target/site/surefire-report.html
