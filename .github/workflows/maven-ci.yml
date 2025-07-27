@@ -36,7 +36,7 @@ jobs:
       - name: Generate full Maven site (includes Surefire report)
         run: mvn site
 
-      - name: Debug: List target/site contents
+      - name: Debug:List target/site contents
         run: ls -R target/site
 
       - name: Upload Surefire HTML report
