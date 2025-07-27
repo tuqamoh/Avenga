@@ -33,10 +33,10 @@ jobs:
       - name: Run Maven tests
         run: mvn clean test
 
-      - name: Generate Surefire HTML report
-        run: mvn surefire-report:report-only
+      - name: Generate full Maven site (includes Surefire report)
+        run: mvn site
 
-      - name: List target site files
+      - name: Debug: List target/site contents
         run: ls -R target/site
 
       - name: Upload Surefire HTML report
